@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CadastroProdutosEletronicos.Servico\CadastroProdutosEletronicos.Servico.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Conteudo\Imagens\Produtos\" />
+    <Folder Include="Conteudo\Imagens\Produtos\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Conteudo\Imagens\Aplicacao\imagem-padrao.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

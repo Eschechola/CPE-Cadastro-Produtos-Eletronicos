@@ -1,0 +1,10 @@
+1 - apresentar os requisitos
+2 - criar o banco de dados
+3 - explicar arquitetura em camadas
+4 - explicar entity framework & ORM
+5 - criar bibliotecas de classes
+6 - criar projeto wpf
+7 - realizar injeção de dependencia
+8 - linkar entity framework
+9 - realizar métodos no service
+10 - construção do front end com os métodos já aplicados

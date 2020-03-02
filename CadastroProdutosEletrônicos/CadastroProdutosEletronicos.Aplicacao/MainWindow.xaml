@@ -1,0 +1,402 @@
+﻿<Window x:Class="CadastroProdutosEletronicos.Aplicacao.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CadastroProdutosEletronicos.Aplicacao"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="Cadastro de Produtos" Height="650" Width="1000">
+
+
+
+    <StackPanel
+        Background="#fff">
+
+        <TextBlock Text="CADASTRO DE PRODUTOS"
+                   FontSize="50"
+                   Foreground="#99938E"
+                   TextAlignment="Center"
+                   Margin="0,40,0,0"
+                   FontFamily="Arial"
+                   />
+
+        <Grid
+            Width="900"
+            Height="120"
+            Margin="0,30,0,0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+
+
+            <TextBlock
+                Text="Termo:"
+                FontSize="18"
+                Foreground="#99938E"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Grid.Column="0"
+                Grid.Row="0"
+                />
+
+            <TextBox
+                Name="input_termo"
+                Width="500"
+                Height="35"
+                Padding="5"
+                BorderThickness="0"
+                Foreground="#525252"
+                Background="#F3F3F3"
+                FontSize="18"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Grid.Column="1"
+                Grid.Row="0"
+            >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="3"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+            <Button 
+                Width="130"
+                Height="38"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                BorderThickness="0"
+                Foreground="White"
+                Background="#00B3DA"
+                FontSize="17"
+                FontWeight="Bold"
+                Grid.Column="2"
+                Grid.Row="0"
+                Click="Pesquisar"
+            >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="3"/>
+                    </Style>
+                </Button.Resources>
+
+                Pesquisar
+
+            </Button>
+
+
+
+
+
+
+
+
+            <TextBlock
+                Text="Pesquisar por:"
+                FontSize="18"
+                Foreground="#99938E"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Grid.Column="0"
+                Grid.Row="1"
+                />
+
+
+            <ComboBox
+                Name="combo_opcao_de_pesquisa"
+                Width="300"
+                Height="35"
+                Padding="5"
+                BorderThickness="0"
+                Foreground="#525252"
+                Background="#F3F3F3"
+                FontSize="18"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Margin="20,0,0,0"
+                Grid.Column="1"
+                Grid.Row="1"
+            >
+                <ComboBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="3"/>
+                    </Style>
+                </ComboBox.Resources>
+
+                <ComboBoxItem IsSelected="True">Nome</ComboBoxItem>
+                <ComboBoxItem>Código de barras</ComboBoxItem>
+            </ComboBox>
+        </Grid>
+
+        <Grid
+            Margin="0,35,0,0"
+            Width="900"
+            >
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width="5.5*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                    Name="txt_quantidade_produtos"
+                    Text="Qt. de produtos: 0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Foreground="#99938E"
+                    FontSize="15"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                />
+
+            <Button
+                    Width="40"
+                    Height="40"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Background="#00AA97"
+                    BorderThickness="0"
+                    FontSize="17"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    Click="ChamarPaginaAdicionar"
+                    >
+
+
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                +
+            </Button>
+
+            <Button
+                    Width="40"
+                    Height="40"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Background="#00AA97"
+                    BorderThickness="0"
+                    FontSize="17"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Grid.Column="3"
+                    Grid.Row="0"
+                    Click="CarregarLista"
+                    >
+
+
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                R
+            </Button>
+        </Grid>
+
+        <Grid
+
+            Width="860"
+            Height="30"
+            Margin="-35,20,0,0"
+            Background="#858585">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Nome do produto"
+                FontSize="14"
+                Foreground="White"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                />
+            
+
+            <TextBlock
+                Grid.Row="0"
+                Grid.Column="1"
+                Text="Cód de barras"
+                FontSize="14"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Foreground="White"/>
+
+            <TextBlock
+                Grid.Row="0"
+                Grid.Column="2"
+                Text="Qt de unitária"
+                FontSize="14"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Foreground="White"/>
+
+            <TextBlock
+                Grid.Row="0"
+                Grid.Column="3"
+                Text="Editar"
+                FontSize="14"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Foreground="White"/>
+
+            <TextBlock
+                Grid.Row="0"
+                Grid.Column="4"
+                Text="Excluir"
+                FontSize="14"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Foreground="White"/>
+
+            <TextBlock
+                Grid.Row="0"
+                Grid.Column="5"
+                Text="Visualizar"
+                FontSize="14"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Foreground="White"/>
+
+        </Grid>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <ListView
+            Width="890"
+            Margin="-10,0,0,0"
+            Height="220"
+            BorderThickness="0"
+            Name="lv_produtos"
+            ScrollViewer.VerticalScrollBarVisibility="Visible"
+            ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                    <Grid
+                            ShowGridLines="True"
+                            Height="30"
+                            Width="870"
+                            Margin="-10,0,0,0"
+                            Background="#F3F3F3">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Text="{Binding NomeProduto}"
+                                FontSize="14"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Foreground="#363636"/>
+
+
+                        <TextBlock
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Text="{Binding CodigoBarras}"
+                                FontSize="14"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Foreground="#363636"/>
+
+                        <TextBlock
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                Text="{Binding ValorUnitario}"
+                                FontSize="14"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Foreground="#363636"/>
+
+
+                        <Button 
+                                Grid.Column="3"
+                                Grid.Row="0"
+                                Foreground="MediumSeaGreen"
+                                Background="Transparent"
+                                BorderThickness="0"
+                            >
+                            VISUALIZAR
+                        </Button>
+
+
+                        <Button 
+                                Foreground="BlueViolet"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Grid.Column="4"
+                                Grid.Row="0"
+                            >
+                            EDITAR
+                        </Button>
+
+
+                        <Button 
+                                Foreground="RED"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Grid.Column="5"
+                                Grid.Row="0"
+                                Tag="{Binding Id}"
+                                Click="ExcluirProduto"
+                            >
+                            DELETAR
+                        </Button>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackPanel>
+</Window>
