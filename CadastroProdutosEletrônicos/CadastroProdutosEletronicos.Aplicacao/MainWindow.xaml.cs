@@ -50,9 +50,11 @@ namespace CadastroProdutosEletronicos.Aplicacao
         private void ChamarPaginaAdicionar(object sender, RoutedEventArgs e)
         {
             var janela = new Window();
-            janela.Content = new AdicionarProduto();
+            janela.Content = new Produto();
             janela.Show();
         }
+
+
 
         private void ExcluirProduto(object sender, RoutedEventArgs e)
         {
@@ -76,6 +78,26 @@ namespace CadastroProdutosEletronicos.Aplicacao
 
             //recarrega a lista de produtos
             CarregarLista(null, null);
+        }
+
+        private void VisualizarProduto(object sender, RoutedEventArgs e)
+        {
+            //pega o id do produto
+            string idProduto = ((Button)sender).Tag.ToString();
+
+            var janela = new Window();
+            janela.Content = new Produto(int.Parse(idProduto));
+            janela.Show();
+        }
+
+        private void AlterarProduto(object sender, RoutedEventArgs e)
+        {
+            //pega o id do produto
+            string idProduto = ((Button)sender).Tag.ToString();
+
+            var janela = new Window();
+            janela.Content = new Produto(int.Parse(idProduto), true);
+            janela.Show();
         }
     }
 }

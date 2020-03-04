@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CadastroProdutosEletronicos.Aplicacao"
         mc:Ignorable="d"
-        ResizeMode="NoResize"
+        ResizeMode="CanMinimize"
         Title="Cadastro de Produtos" Height="650" Width="1000">
 
 
@@ -366,6 +366,8 @@
                                 Foreground="MediumSeaGreen"
                                 Background="Transparent"
                                 BorderThickness="0"
+                                Tag="{Binding Id}"
+                                Click="VisualizarProduto"
                             >
                             VISUALIZAR
                         </Button>
@@ -377,6 +379,8 @@
                                 BorderThickness="0"
                                 Grid.Column="4"
                                 Grid.Row="0"
+                                Tag="{Binding Id}"
+                                Click="AlterarProduto"
                             >
                             EDITAR
                         </Button>
