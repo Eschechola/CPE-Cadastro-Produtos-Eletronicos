@@ -1,0 +1,8 @@
+C:\Users\Lucas\Desktop\Git\CPE-Cadastro-Produtos-Eletronicos\CadastroProdutosEletrônicos\CadastroProdutosEletronicos.Dominio.Entidades\bin\Debug\netcoreapp3.0\CadastroProdutosEletronicos.Dominio.Entidades.deps.json
+C:\Users\Lucas\Desktop\Git\CPE-Cadastro-Produtos-Eletronicos\CadastroProdutosEletrônicos\CadastroProdutosEletronicos.Dominio.Entidades\bin\Debug\netcoreapp3.0\CadastroProdutosEletronicos.Dominio.Entidades.dll
+C:\Users\Lucas\Desktop\Git\CPE-Cadastro-Produtos-Eletronicos\CadastroProdutosEletrônicos\CadastroProdutosEletronicos.Dominio.Entidades\bin\Debug\netcoreapp3.0\CadastroProdutosEletronicos.Dominio.Entidades.pdb
+C:\Users\Lucas\Desktop\Git\CPE-Cadastro-Produtos-Eletronicos\CadastroProdutosEletrônicos\CadastroProdutosEletronicos.Dominio.Entidades\obj\Debug\netcoreapp3.0\CadastroProdutosEletronicos.Dominio.Entidades.csprojAssemblyReference.cache
+C:\Users\Lucas\Desktop\Git\CPE-Cadastro-Produtos-Eletronicos\CadastroProdutosEletrônicos\CadastroProdutosEletronicos.Dominio.Entidades\obj\Debug\netcoreapp3.0\CadastroProdutosEletronicos.Dominio.Entidades.AssemblyInfoInputs.cache
+C:\Users\Lucas\Desktop\Git\CPE-Cadastro-Produtos-Eletronicos\CadastroProdutosEletrônicos\CadastroProdutosEletronicos.Dominio.Entidades\obj\Debug\netcoreapp3.0\CadastroProdutosEletronicos.Dominio.Entidades.AssemblyInfo.cs
+C:\Users\Lucas\Desktop\Git\CPE-Cadastro-Produtos-Eletronicos\CadastroProdutosEletrônicos\CadastroProdutosEletronicos.Dominio.Entidades\obj\Debug\netcoreapp3.0\CadastroProdutosEletronicos.Dominio.Entidades.dll
+C:\Users\Lucas\Desktop\Git\CPE-Cadastro-Produtos-Eletronicos\CadastroProdutosEletrônicos\CadastroProdutosEletronicos.Dominio.Entidades\obj\Debug\netcoreapp3.0\CadastroProdutosEletronicos.Dominio.Entidades.pdb
