@@ -29,7 +29,7 @@ namespace CadastroProdutosEletronicos.Dominio.Contexto.Contexto
         {
             modelBuilder.Entity<Produtos>(entity =>
             {
-                entity.ToTable("produtos", "cpe");
+                entity.ToTable("produtos", "cpp");
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
